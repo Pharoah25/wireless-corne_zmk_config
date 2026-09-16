@@ -3,12 +3,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      board: nice_nano_v2
-      shield: corne_left
-      build_matrix: |
-        include:
-          - board: nice_nano_v2
-            shield: corne_left nice_view_adapter nice_view
-          - board: nice_nano_v2
-            shield: corne_right nice_view_adapter nice_view
